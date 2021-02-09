@@ -1,0 +1,16 @@
+.projects_container{
+    width: 80%;
+    height: 100%;
+    margin-left:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+} 
+
+.project-page-title{
+    margin-left: 25%;
+    color: #2A3B4E;
+    font-size: 45px;
+}

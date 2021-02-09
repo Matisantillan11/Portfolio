@@ -1,0 +1,107 @@
+.project_card{
+    width: 450px;
+    height: 300px;
+    box-shadow: 4px 8px 8px 4px rgba(32,33,36, 0.3);
+    border: 0.5px solid black;
+    border-radius: 4px;
+    margin: 1% 2.5%; 
+    overflow: hidden;
+    display: inline-block;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+    position: relative;
+}
+
+.project_card:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.project_card--img{
+    width: 105%;
+    height: 100%;
+    border-radius: 0px 0px 8px 8px;
+    object-fit: fill;
+}
+
+
+.project_card--container {
+    background: linear-gradient(to top, #040404c7, #000000e1);
+    position: absolute;
+    opacity: 0;
+    top: 2.5vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 450px;
+    height: 0px;
+    border-radius: 0px 0px 8px 8px;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    
+}
+
+.project_card_titleContainer{
+    height: 2.5vh;
+    background: rgba(138, 138, 138, 0.541);
+}
+
+
+.project_card:hover .project_card--container {
+    height: 280px;
+    color:white;
+    opacity:1;
+}
+
+.project_card--title{
+    padding-top: 1%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.liks-container {
+    display:flex; 
+    flex-direction: column; 
+    text-align: center;
+}
+
+.link{
+    margin-top: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color:white;
+}
+
+
+.link:last-child{
+    margin-top: 80px;
+    color:#1e60a7;
+}
+
+button{
+    outline: none;
+    border-radius: 8px;
+    padding:2.5%;
+    margin: 18% 2.5% 0 8%;
+    border: 1px solid white; 
+    background: transparent;
+    cursor: pointer; 
+}
+
+/* .project_card:nth-child(2n){
+    margin-top: 8%;
+    margin-left: 10%;
+}
+ */
+button:hover{
+    color: black;
+    background: white;
+}
+
+button:first-child{
+    margin-left: 25%;
+}

@@ -1,0 +1,52 @@
+.project_image--container{
+    width: 70vw;
+    height: 70vh;
+    margin: 5% 15%;
+    border-radius: 8px;
+    box-shadow: 6px 6px 2px rgba(0, 0, 1, 0.5);
+}
+.project_name{
+    font-size: 50px;
+    color: rgba(41, 41, 43, 0.5);
+    margin: 8% 15% 5% 15%;
+}
+
+.project_image--img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.project_categories{
+    margin: 2.5% 15%;
+}
+
+.project_description--container{
+    width: 70%; 
+    height: 100px;
+    margin: 2.5% 15%;
+    text-align: left;
+    overflow:hidden;
+}
+
+.project_techs--container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 15%;
+    
+}
+.project_techsAndName--container{
+    display: flex;
+    flex-direction: row;
+}
+
+.project_techs--img{
+    width: 50px;
+    height:40px;
+    margin: 2% 1.5% 2% 0;
+}
+
+.projects_techs--name{
+    margin: 3% 0 0 0;
+}
