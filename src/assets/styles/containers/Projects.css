@@ -6,11 +6,11 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-  
 } 
 
 .project-page-title{
-    margin-left: 25%;
+    margin: 2.5% 0;
+    text-align:Center;
     color: #2A3B4E;
     font-size: 45px;
 }

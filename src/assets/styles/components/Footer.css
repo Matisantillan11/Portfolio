@@ -1,0 +1,11 @@
+.footer_container{
+    position:relative;
+    text-align: center;
+    bottom: 0;
+    margin: 1% 0 1% 0;
+    height: 2%;
+}
+
+.footer_container .footer_text{
+    font-size: 15px;
+}

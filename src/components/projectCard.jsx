@@ -22,13 +22,13 @@ export default class ProjectCard extends Component{
             title : this.props.title,
             description : this.props.description
         })
-    }
+    } 
 
     render(){
         return(
             <>
             <div 
-            onMouseOver={this.handleMouseOver}
+            onMouseOver={this.props.handleMouseOver}
             className="project_card">
                 <div className="project_card_titleContainer">
                     <p className="project_card--title">{this.props.title} Project</p> 

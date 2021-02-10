@@ -5,13 +5,14 @@
 }
 
 .navbar_logo{
-    width:5%;
+    width:10%;
     height: 100%;
-    border:1px solid black;
+    margin-top: 1%;
+    margin-left: 12%;
 }
 
 .navbar__items-menu{
-    width: 50%;
+    width: 55%;
     margin-left: auto;
     display:flex;
     list-style: none;
@@ -21,16 +22,15 @@
 }
 
 .navbar__items-menu .navbar__items--link .navbar_redirections{
-    font-size: 16px;
+    font-size: 22px;
     text-decoration: none;
-    color:#2A3B4E;
+    color:rgb(175, 150, 150);
+    outline: none;
 }
 
 .navbar__items-menu .navbar__items--link .navbar_redirections:hover{
-    text-decoration: underline;
-    color:#1B6EAB;
+    cursor: pointer;
 }
-
 
 @media screen and (max-width: 768px){
     .navbar__items-menu{

@@ -31,8 +31,8 @@ export default class MyDescription extends Component{
                         Who I Am? 
                     </h2>
                     <p className="WhoIam_container-body">
-                    I am a developer from Arrgentina who loves web application development. I am studying Informatics at IES 21 and constantly growing learning in online academies (like <a className="WhoIam_link" href="https://platzi.com/">Platzi{/* <img className="WhoIam_link-img"src={Platzi}/> */}</a> or <a className="WhoIam_link" href="https://escueladevrock.com/">Escuela DevRock{/* <img className="WhoIam_link-img-dev"src={Devrock}/> */}</a>).</p>
-                    {/* <p className="WhoIam_container-body">My curiosity makes me able to quickly learn new tools and technologies when I needed.</p> */}
+                    I am a developer from Arrgentina who loves web application development. I am studying Informatics at IES 21 and constantly growing learning in online academies (like <a className="WhoIam_link" target="_blank" href="https://platzi.com/p/matisantillan11_/">Platzi{/* <img className="WhoIam_link-img"src={Platzi}/> */}</a> or <a className="WhoIam_link" target="_blank" href="https://escueladevrock.com/">Escuela DevRock{/* <img className="WhoIam_link-img-dev"src={Devrock}/> */}</a>).</p>
+                    <p className="WhoIam_container-body">My curiosity makes me able to quickly learn new tools and technologies when I needed.</p> 
                     <p className="WhoIam_container-body">I am a very capable person, focused, with passion for what I do, who knows how to work as a team, under pressure and in an organized way in the fulfillment of individual and group objectives. I am in a stage of constant learning and intellectual growth and my interest is to be part of a team that will allow me to develop widely.</p>
                 </div>
                 <div className="MyStack_container">

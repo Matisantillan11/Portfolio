@@ -10,15 +10,7 @@ import FindRock from '../assets/images/find-rock.png'
 import '../assets/styles/containers/Projects.css'
 
 export default class Projects extends Component{
-    state = {
-        title: '',
-        description: '',
-        image: '' 
-
-    }; 
-
     
-
     render(){
         return(
             <>
@@ -28,15 +20,18 @@ export default class Projects extends Component{
                 <ProjectCard 
                 title="GodHard"
                 image={GodHard}
-                description="Come queso" />
+                description="Come queso" 
+                />
                 <ProjectCard 
                 title="Find Rock"
                 image={FindRock}
-                description="Come queso" />
+                description="Come queso" 
+                />
                 <ProjectCard
                 title="Dietetica Kaori"
                 image={FindRock}
-                description="Come queso"/>
+                description="Come queso"
+                }/>
                 
             </div>
             </>
