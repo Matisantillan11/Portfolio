@@ -26,11 +26,11 @@
 }
 .title{
     margin-top: 12.5%;
-    font-size: 40px;
+    font-size: 28px;
 }
 
 .subtitle{
-    font-size: 35px;
+    font-size: 22px;
     font-weight: 700;
 }
 
@@ -45,7 +45,7 @@
 
 .text_container p:nth-child(3){
     margin-top: 3%;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .text_container p{
@@ -58,7 +58,7 @@
 }
 .link_container .link{
     color: #1B6EAB;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     background-image: linear-gradient(#4b87cf, #2f69ac);
     background-position: 0% 100%;

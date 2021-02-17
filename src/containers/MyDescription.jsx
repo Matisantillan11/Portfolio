@@ -4,20 +4,59 @@ import Navbar from '../components/Navbar';
 
 import Me from '../assets/images/me.png';
 
-import ReactImage from '../assets/images/icons/react.svg'
-import HTML5 from '../assets/images/icons/html5.svg'
-import CSS3 from '../assets/images/icons/css3.svg'
-import JavaScript from '../assets/images/icons/javascript.svg'
-import Sass from '../assets/images/icons/sass.svg'
-import PHP from '../assets/images/icons/php.svg'
-import Firebase from '../assets/images/icons/firebase.svg'
-import Github from '../assets/images/icons/github.svg'
+
 import Platzi from '../assets/images/icons/platzi.png'
 import Devrock from '../assets/images/icons/devrock.svg'
 
 import '../assets/styles/containers/MyDescription.css';
+import Technologies from '../components/Technologies';
 
 export default class MyDescription extends Component{
+    state={
+        technologies:[
+            {
+                id:1,
+                name: "HTML5",
+                image: 'https://cdn.worldvectorlogo.com/logos/html5.svg'
+            },
+            {
+                id:2,
+                name: "CSS3",
+                image: 'https://cdn.worldvectorlogo.com/logos/css3.svg' 
+            },
+            {
+                id:3,
+                name: "Sass",
+                image:'https://cdn.worldvectorlogo.com/logos/sass-1.svg'
+            },
+            {
+                id:4,
+                name:'JavaScript',
+                image:'https://cdn.worldvectorlogo.com/logos/logo-javascript.svg'
+            },
+            {
+                id:5,
+                name:'React Js',
+                image:'https://cdn.worldvectorlogo.com/logos/react-2.svg'
+            },
+            {
+                id:6,
+                name:'Firebase',
+                image:'https://cdn.worldvectorlogo.com/logos/firebase-1.svg'
+            },
+            {
+                id:7,
+                name:'PHP',
+                image:'https://cdn.worldvectorlogo.com/logos/php-1.svg'
+            },
+            {
+                id:8,
+                name:'GitHub',
+                image:'https://cdn.worldvectorlogo.com/logos/github-icon-1.svg'
+            }
+        ]
+    }
+
     render(){
         return(
             <div>
@@ -37,16 +76,7 @@ export default class MyDescription extends Component{
                 </div>
                 <div className="MyStack_container">
                     <h2 className="MyStack_container-title">My Stack</h2>
-                    <ul className="MyStack-list">
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={HTML5} alt="html Icon"/>HTML</li>
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={CSS3} alt="Css icon"/>CSS</li>
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={Sass} alt="Sass icon"/>Sass</li>
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={JavaScript} alt="Javascript Icon"/>JavaScript</li>
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={ReactImage} alt="React Icon"/>React Js</li>
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={Firebase} alt="php icon"/>Firebase</li>
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={PHP} alt="php icon"/>PHP</li>
-                        <li className="MyStack-list-item"><img className="MyStack-list-item--img" src={Github} alt="php icon"/>Github</li>
-                    </ul>
+                    <Technologies technologies={this.state.technologies}/>
                 </div>
             </div>
         )

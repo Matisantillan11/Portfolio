@@ -32,6 +32,7 @@ export default function Navbar (){
                     <Link to="/">
                         <img className = "navbar_logo" src={logo} alt=""/>
                     </Link>
+                    
                     <ul className="navbar__items-menu" id="menu" status= {status}>
                         <li className="navbar__items--link"><Link className="navbar_redirections"to="/Projects">Portfolio</Link></li>
                         <li className="navbar__items--link"><Link className="navbar_redirections"to="/About">About me</Link></li>
@@ -40,6 +41,7 @@ export default function Navbar (){
                         <li className="navbar__items--link"><a className="navbar_redirections" target="_blank" href="https://github.com/Matisantillan11">Github</a></li>
                         <li className="navbar__items--link"><a className="navbar_redirections"href="/">CV</a></li>
                     </ul>
+                    
                     
                 </nav>
             </div>

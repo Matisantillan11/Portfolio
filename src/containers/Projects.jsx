@@ -10,7 +10,61 @@ import FindRock from '../assets/images/find-rock.png'
 import '../assets/styles/containers/Projects.css'
 
 export default class Projects extends Component{
-    
+    state={
+        projects:[
+            {
+                id:1,
+                title: "Find Rock",
+                image: 'https://i.ibb.co/fM5ZmD2/find-rock.png',
+                preview:'https://find-rock-drab.vercel.app/',
+                code:'https://github.com/Matisantillan11/find-rock',
+                description: 'Project from course of React in Escuela DevRock. In this project I connect to Last.fm API to create an artist/musician searcher.'
+            },
+            {
+                id:2,
+                title: "Simon Dice",
+                image: 'https://i.ibb.co/64dS38c/simondice.png' ,
+                preview:'https://simon-dice-omega.vercel.app/',
+                code:'https://github.com/Matisantillan11/SimonDice',
+                description: 'In this project de porpouse is to recreate SimonDice game whit a secuense to reply and using an score to know who is winning. '
+            },
+            {
+                id:3,
+                title: "Dietetica Kaori",
+                image:'https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg',
+                preview:'',
+                code:'https://github.com/Matisantillan11/kaori_dietetica',
+                description: 'website created for, in an easy and technological way, the manager can keep up to date the stock of a warehouse of healthy products (dietetica).'
+            }
+        ],
+        technologies:[
+                {
+                    id:1,
+                    name: "HTML5",
+                    image: 'https://cdn.worldvectorlogo.com/logos/html5.svg'
+                },
+                {
+                    id:2,
+                    name: "CSS3",
+                    image: 'https://cdn.worldvectorlogo.com/logos/css3.svg' 
+                }, 
+                {
+                    id:3,
+                    name:'JavaScript',
+                    image:'https://cdn.worldvectorlogo.com/logos/logo-javascript.svg'
+                },
+                {
+                    id:4,
+                    name:'React Js',
+                    image:'https://cdn.worldvectorlogo.com/logos/react-2.svg'
+                },
+                {
+                    id:5,
+                    name:'Firebase',
+                    image:'https://cdn.worldvectorlogo.com/logos/firebase-1.svg'
+                }
+        ]
+    }
     render(){
         return(
             <>
@@ -18,20 +72,11 @@ export default class Projects extends Component{
             <h1 className="project-page-title">My Projects</h1>
             <div className="projects_container">
                 <ProjectCard 
-                title="GodHard"
-                image={GodHard}
-                description="Come queso" 
+                projects = {this.state.projects}
+                technologies = {this.state.technologies}
                 />
-                <ProjectCard 
-                title="Find Rock"
-                image={FindRock}
-                description="Come queso" 
-                />
-                <ProjectCard
-                title="Dietetica Kaori"
-                image={FindRock}
-                description="Come queso"
-                }/>
+                
+                
                 
             </div>
             </>

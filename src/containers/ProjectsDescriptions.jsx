@@ -9,19 +9,12 @@ import ProjectCard from '../components/projectCard';
 export default class ProjectDescriptions extends Component{
     
     state={
-        title: '',
-        image: '',
-        description: ''
+        loading: true,
+        error: null,
+        data: undefined
     };
 
-    handleMouseOver = () =>{
-        this.setState({
-            /* image : this.image,
-            title : this.title,
-            description : this.description */
-        }) 
-    }
-
+    componentDidMount(){}
     render(){
         return(
             

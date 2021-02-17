@@ -1,56 +1,51 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { Component } from 'react';
+
+//Components
+import Technologies from './Technologies'
 //Styles
 import '../assets/styles/components/ProjectCard.css'
 //Importing Components
 import GitHub from '../assets/images/icons/github.svg';
-import projectImage from '../assets/images/godhard.png'
-import Projects from '../containers/Projects';
+
 
 export default class ProjectCard extends Component{
-    state = {
-        title: '',
-        description: '',
-        image: ''
-
-    };
-
-    handleMouseOver = () =>{
-        this.setState({
-            image : this.props.image,
-            title : this.props.title,
-            description : this.props.description
-        })
-    } 
 
     render(){
         return(
+            
             <>
-            <div 
-            onMouseOver={this.props.handleMouseOver}
-            className="project_card">
-                <div className="project_card_titleContainer">
-                    <p className="project_card--title">{this.props.title} Project</p> 
-                </div>
-                <img className="project_card--img"src={this.props.image} alt={this.props.title} />
-                <div className="project_card--container">
-                        <div className="liks-container">
-                            <Link className = "link" to="/">
-                                View Code <img href={GitHub}/>
-                            </Link>
-                            <Link className = "link" to="/">
-                                Live Preview
-                            </Link>
-                            <Link className = "link" to={`/ProjectDescription? ${this.state.title}`}>
-                                Learn More...
-                            </Link>
-                        </div>
-                
+                {this.props.projects.map(project =>{
+                    return(
                     
-                </div>
-            </div>
+                        <div 
+                        className="project_card"
+                        key={project.id}>
+                            <img className="project_card--img"src={project.image} alt={project.title} />
+                            <div className="project_card_titleContainer">
+                                <h2 className="project_card--title">{project.title} Project</h2> 
+                                <p className="project_card--description">{project.description}</p>
+                                <Technologies className="project_card--tech" technologies={this.props.technologies} />
+                            </div>
+                            <div className="project_card--container">
+                                    <div className="links-container">
+                                        <a className = "link" target="_blank" href={project.code}>
+                                            View Code
+                                        </a>
+                                        <a className = "link" target="_blank" href={project.preview}>
+                                            Live Preview
+                                        </a>
+                                    </div>
+                            </div> 
+                        </div>
+                    
+                        
+                        
+                    )
+                })}
             </>
+            
         )
     }
 }
