@@ -15,7 +15,7 @@ export default class Projects extends Component{
             {
                 id:1,
                 title: "Find Rock",
-                image: 'https://i.ibb.co/fM5ZmD2/find-rock.png',
+                image: 'https://i.ibb.co/1rjYd42/find-rock.png',
                 preview:'https://find-rock-drab.vercel.app/',
                 code:'https://github.com/Matisantillan11/find-rock',
                 description: 'Project from course of React in Escuela DevRock. In this project I connect to Last.fm API to create an artist/musician searcher.'
@@ -23,7 +23,7 @@ export default class Projects extends Component{
             {
                 id:2,
                 title: "Simon Dice",
-                image: 'https://i.ibb.co/64dS38c/simondice.png' ,
+                image: 'https://i.ibb.co/BBrd8Jz/simon-dice.png' ,
                 preview:'https://simon-dice-omega.vercel.app/',
                 code:'https://github.com/Matisantillan11/SimonDice',
                 description: 'In this project de porpouse is to recreate SimonDice game whit a secuense to reply and using an score to know who is winning. '

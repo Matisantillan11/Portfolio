@@ -1,7 +1,7 @@
 
 .main_container{
     margin-top: 2%;
-    height: 100%;
+    height: 80vh;
     display: flex;
 }
 
@@ -11,7 +11,7 @@
     top:0;
     right: 0;
     width:60%;
-    height: 90%;
+    height: 100%;
     background-image: url('../../images/hero-back.svg');
     background-repeat: no-repeat;
     background-size: 110% 180%;
@@ -58,7 +58,7 @@
 }
 .link_container .link{
     color: #1B6EAB;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
     background-image: linear-gradient(#4b87cf, #2f69ac);
     background-position: 0% 100%;
