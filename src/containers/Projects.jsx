@@ -14,10 +14,10 @@ export default class Projects extends Component{
         projects:[
             {
                 id:1,
-                title: "Dietetica Kaori",
+                title: "My personal website",
                 image:'https://i.ibb.co/RBsMxXr/portfolio.png',
-                preview:'',
-                code:'https://github.com/Matisantillan11/kaori_dietetica',
+                preview:'https://matisantillan.dev/',
+                code:'https://github.com/Matisantillan11/Portfolio',
                 description: 'This project is my personal website. The porpose was hace a place to expose my work and where people might know me better.',
                 react:true
             },
