@@ -18,7 +18,6 @@ export default class ProjectCard extends Component{
             <>
                 {this.props.projects.map(project =>{
                     return(
-                    
                         <div 
                         className="project_card"
                         key={project.id}>
@@ -26,7 +25,7 @@ export default class ProjectCard extends Component{
                             <div className="project_card_titleContainer">
                                 <h2 className="project_card--title">{project.title} Project</h2> 
                                 <p className="project_card--description">{project.description}</p>
-                                <Technologies className="project_card--tech" technologies={this.props.technologies} />
+                                {project.react ? <Technologies className="project_card--tech" technologies={this.props.technologies.slice(0,4)} /> : <Technologies className="project_card--tech" technologies={this.props.technologies.slice(0,3)} />}
                             </div>
                             <div className="project_card--container">
                                     <div className="links-container">
@@ -39,9 +38,6 @@ export default class ProjectCard extends Component{
                                     </div>
                             </div> 
                         </div>
-                    
-                        
-                        
                     )
                 })}
             </>

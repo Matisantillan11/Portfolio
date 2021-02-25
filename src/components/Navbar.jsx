@@ -39,7 +39,6 @@ export default function Navbar (){
                         <li className="navbar__items--link"><a className="navbar_redirections"href="mailto:matias1.santillan@gmail.com">Contact me</a></li>
                         <li className="navbar__items--link"><a className="navbar_redirections" target="_blank" href="https://www.linkedin.com/in/matisantillan11/">Linkedin</a></li>
                         <li className="navbar__items--link"><a className="navbar_redirections" target="_blank" href="https://github.com/Matisantillan11">Github</a></li>
-                        <li className="navbar__items--link"><a className="navbar_redirections"href="/">CV</a></li>
                     </ul>
                     
                     

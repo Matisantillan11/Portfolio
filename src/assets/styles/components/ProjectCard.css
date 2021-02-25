@@ -45,7 +45,9 @@
 .project_card_titleContainer{
     height: 100%;
     width: 40%;
-
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project_card:hover .project_card--container {

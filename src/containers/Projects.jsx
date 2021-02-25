@@ -14,27 +14,30 @@ export default class Projects extends Component{
         projects:[
             {
                 id:1,
+                title: "Dietetica Kaori",
+                image:'https://i.ibb.co/RBsMxXr/portfolio.png',
+                preview:'',
+                code:'https://github.com/Matisantillan11/kaori_dietetica',
+                description: 'This project is my personal website. The porpose was hace a place to expose my work and where people might know me better.',
+                react:true
+            },
+            {
+                id:2,
                 title: "Find Rock",
                 image: 'https://i.ibb.co/1rjYd42/find-rock.png',
                 preview:'https://find-rock-drab.vercel.app/',
                 code:'https://github.com/Matisantillan11/find-rock',
-                description: 'Project from course of React in Escuela DevRock. In this project I connect to Last.fm API to create an artist/musician searcher.'
+                description: 'Project from course of React in Escuela DevRock. In this project I connect to Last.fm API to create an artist/musician searcher.',
+                react: true
             },
             {
-                id:2,
+                id:3,
                 title: "Simon Dice",
                 image: 'https://i.ibb.co/BBrd8Jz/simon-dice.png' ,
                 preview:'https://simon-dice-omega.vercel.app/',
                 code:'https://github.com/Matisantillan11/SimonDice',
-                description: 'In this project de porpouse is to recreate SimonDice game whit a secuense to reply and using an score to know who is winning. '
-            },
-            {
-                id:3,
-                title: "Dietetica Kaori",
-                image:'https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg',
-                preview:'',
-                code:'https://github.com/Matisantillan11/kaori_dietetica',
-                description: 'website created for, in an easy and technological way, the manager can keep up to date the stock of a warehouse of healthy products (dietetica).'
+                description: 'In this project de porpouse is to recreate SimonDice game whit a secuense to reply and using an score to know who is winning. ',
+                react: false
             }
         ],
         technologies:[
