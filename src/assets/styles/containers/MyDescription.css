@@ -87,3 +87,31 @@
     height: 30px;
     margin: 1% 1% 0% 0;
 }
+
+@media screen and (max-width:768px){
+    .MyDescription{
+        height:190vh
+    }
+    .MyDescription_container{
+        width: 60%;
+        margin: 2% 15%;
+    }
+}
+@media screen and (max-width:600px){
+    .MyDescription{
+        height:200vh
+    }
+    .MyDescription_container{
+        width: 70%;
+        margin: 2% 10%;
+    }
+}
+@media screen and (max-width:500px){
+    .MyDescription{
+        height:215vh
+    }
+    .MyDescription_container{
+        width: 60%;
+        margin: 2% 5%;
+    }
+}

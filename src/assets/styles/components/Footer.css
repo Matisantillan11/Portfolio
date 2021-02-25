@@ -9,3 +9,7 @@
 .footer_container .footer_text{
     font-size: 15px;
 }
+
+@media screen and (max-width: 768px){
+    .footer_container{margin: 2.5% 0%;}
+} 

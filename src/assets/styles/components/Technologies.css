@@ -2,7 +2,7 @@
     display:flex; 
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 15%;
+    margin-top: 15% ;
 }
 .project_techsAndName--container{
     display: flex;

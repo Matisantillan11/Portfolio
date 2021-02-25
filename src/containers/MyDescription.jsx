@@ -2,14 +2,10 @@ import React from 'react';
 import { Component } from 'react';
 import Navbar from '../components/Navbar';
 
+import Technologies from '../components/Technologies';
 import Me from '../assets/images/me.png';
 
-
-import Platzi from '../assets/images/icons/platzi.png'
-import Devrock from '../assets/images/icons/devrock.svg'
-
 import '../assets/styles/containers/MyDescription.css';
-import Technologies from '../components/Technologies';
 
 export default class MyDescription extends Component{
     state={
@@ -59,26 +55,28 @@ export default class MyDescription extends Component{
 
     render(){
         return(
-            <div>
+            <>
                 <Navbar/>
-                <div className="MyDescription_container">
-                    <img className ="MyDescription_container-image" src={Me} alt="Matias Santillan"/>
-                    <h1 className="MyDescription_container-title">Matias Santillan</h1>
+                <div className="MyDescription">
+                    <div className="MyDescription_container">
+                        <img className ="MyDescription_container-image" src={Me} alt="Matias Santillan"/>
+                        <h1 className="MyDescription_container-title">Matias Santillan</h1>
+                    </div>
+                    <div className="WhoIam_container">
+                        <h2 className="WhoIam_container-title">
+                            Who I Am? 
+                        </h2>
+                        <p className="WhoIam_container-body">
+                        I am a developer from Arrgentina who loves web application development. I am studying Informatics at IES 21 and constantly growing learning in online academies (like <a className="WhoIam_link" rel="noopener noreferrer"target="_blank" href="https://platzi.com/p/matisantillan11_/">Platzi</a> or <a className="WhoIam_link" target="_blank" rel="noopener noreferrer" href="https://escueladevrock.com/">Escuela DevRock</a>).</p>
+                        <p className="WhoIam_container-body">My curiosity makes me able to quickly learn new tools and technologies when I needed.</p> 
+                        <p className="WhoIam_container-body">I am a very capable person, focused, with passion for what I do, who knows how to work as a team, under pressure and in an organized way in the fulfillment of individual and group objectives. I am in a stage of constant learning and intellectual growth and my interest is to be part of a team that will allow me to develop widely.</p>
+                    </div>
+                    <div className="MyStack_container">
+                        <h2 className="MyStack_container-title">My Stack</h2>
+                        <Technologies technologies={this.state.technologies}/>
+                    </div>
                 </div>
-                <div className="WhoIam_container">
-                    <h2 className="WhoIam_container-title">
-                        Who I Am? 
-                    </h2>
-                    <p className="WhoIam_container-body">
-                    I am a developer from Arrgentina who loves web application development. I am studying Informatics at IES 21 and constantly growing learning in online academies (like <a className="WhoIam_link" target="_blank" href="https://platzi.com/p/matisantillan11_/">Platzi{/* <img className="WhoIam_link-img"src={Platzi}/> */}</a> or <a className="WhoIam_link" target="_blank" href="https://escueladevrock.com/">Escuela DevRock{/* <img className="WhoIam_link-img-dev"src={Devrock}/> */}</a>).</p>
-                    <p className="WhoIam_container-body">My curiosity makes me able to quickly learn new tools and technologies when I needed.</p> 
-                    <p className="WhoIam_container-body">I am a very capable person, focused, with passion for what I do, who knows how to work as a team, under pressure and in an organized way in the fulfillment of individual and group objectives. I am in a stage of constant learning and intellectual growth and my interest is to be part of a team that will allow me to develop widely.</p>
-                </div>
-                <div className="MyStack_container">
-                    <h2 className="MyStack_container-title">My Stack</h2>
-                    <Technologies technologies={this.state.technologies}/>
-                </div>
-            </div>
+            </>
         )
     }
 }

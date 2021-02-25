@@ -1,11 +1,7 @@
-import React, {Component, useState} from 'react' 
+import React, {Component} from 'react' 
 
 import Navbar from '../components/Navbar'
 import ProjectCard from '../components/projectCard'
-
-import GodHard from '../assets/images/godhard.png'
-import FindRock from '../assets/images/find-rock.png'
-
 
 import '../assets/styles/containers/Projects.css'
 

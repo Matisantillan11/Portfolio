@@ -11,7 +11,11 @@
 
 .project-page-title{
     
-    text-align:Center;
+    text-align:center;
     color: #2A3B4E;
     font-size: 45px;
+}
+
+@media screen and (max-width: 768px){
+    .project-page-title{margin-top: 10% ;}
 }

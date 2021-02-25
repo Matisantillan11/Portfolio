@@ -22,14 +22,15 @@ export default function Navbar (){
 
     
         return(
-            <div>
+            <>
                 <nav className="navbar">
                     <div onClick={expandMenu} className="burger">
                         <i className={status}></i>
                         <i className={status}></i>
                         <i className={status}></i>
                     </div>
-                    <Link to="/">
+
+                    <Link className="navbar_link" to="/">
                         <img className = "navbar_logo" src={logo} alt=""/>
                     </Link>
                     
@@ -37,13 +38,11 @@ export default function Navbar (){
                         <li className="navbar__items--link"><Link className="navbar_redirections"to="/Projects">Portfolio</Link></li>
                         <li className="navbar__items--link"><Link className="navbar_redirections"to="/About">About me</Link></li>
                         <li className="navbar__items--link"><a className="navbar_redirections"href="mailto:matias1.santillan@gmail.com">Contact me</a></li>
-                        <li className="navbar__items--link"><a className="navbar_redirections" target="_blank" href="https://www.linkedin.com/in/matisantillan11/">Linkedin</a></li>
-                        <li className="navbar__items--link"><a className="navbar_redirections" target="_blank" href="https://github.com/Matisantillan11">Github</a></li>
+                        <li className="navbar__items--link"><a className="navbar_redirections" rel="noopener noreferrer"target="_blank" href="https://www.linkedin.com/in/matisantillan11/">Linkedin</a></li>
+                        <li className="navbar__items--link"><a className="navbar_redirections" rel="noopener noreferrer"target="_blank" href="https://github.com/Matisantillan11">Github</a></li>
                     </ul>
-                    
-                    
                 </nav>
-            </div>
+            </>
         )
     
 }
