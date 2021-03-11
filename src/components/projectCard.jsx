@@ -1,6 +1,7 @@
 import React from 'react'
 import { Component } from 'react';
-
+import { withRouter } from 'react-router-dom';
+import "firebase/firebase-storage";
 //Components
 import Technologies from './Technologies'
 //Styles
@@ -8,43 +9,54 @@ import '../assets/styles/components/ProjectCard.css'
 
 
 
-export default class ProjectCard extends Component{
+class ProjectCard extends Component{
+    /* state = {
+    url: null,
+    };
+
+    componentWillMount() {
+        let ref = this.props.pic;
+        firebase
+            .storage()
+            .ref(ref)
+            .getDownloadURL()
+            .then((url) => {
+            this.setState({ url });
+            });
+    } */
+
+    searchProject = () =>{
+        this.props.history.push(`/Description?${this.props.name}`)
+    }
 
     render(){
         return(
             
             <>
-                {this.props.projects.map(project =>{
-                    return(
-                        <div 
-                        className="project_card"
-                        key={project.id}>
-                            <img className="project_card--img"src={project.image} alt={project.title} />
-                            <div className="project_card_textContainer">
-                                <div className="project_card_titleContainer">
-                                    <h2 className="project_card--title">{project.title} Project</h2> 
-                                    <p className="project_card--description">{project.description}</p>
-                                </div>
-                                <div className="techs_Container">
-                                    {project.react ? <Technologies className="project_card--tech" technologies={this.props.technologies.slice(0,4)} /> : <Technologies className="project_card--tech" technologies={this.props.technologies.slice(0,3)} />}
-                                </div>
-                                
-                            </div>
-                            <div className="project_card--container">
-                                    <div className="links-container">
-                                        <a className = "link" rel="noopener noreferrer" target="_blank" href={project.code}>
-                                            View Code
-                                        </a>
-                                        <a className = "link" rel="noopener noreferrer" target="_blank" href={project.preview}>
-                                            Live Preview
-                                        </a>
-                                    </div>
-                            </div> 
+            
+            <div 
+            className="project_card">
+                <img className="project_card--img"src={this.props.pic} alt={this.props.name} />
+                    <div className="project_card--container">
+
+                        <div  className="links-container">
+                            <a className = "link" rel="noopener noreferrer" target="_blank" href={this.props.code}>
+                                View Code
+                            </a>
+                            <a className = "link" rel="noopener noreferrer" target="_blank" href={this.props.preview}>
+                                Live Preview
+                            </a>
+                            <a className = "link" rel="noopener noreferrer" onClick={this.searchProject}>
+                                More..
+                            </a>
                         </div>
-                    )
-                })}
+                    </div>
+                
+            </div>
             </>
             
         )
     }
 }
+
+export default withRouter(ProjectCard)

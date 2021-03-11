@@ -2,40 +2,13 @@ import React, {Component} from 'react'
 
 import Navbar from '../components/Navbar'
 import ProjectCard from '../components/projectCard'
-
+import firebase from "firebase/app";
+import "firebase/database";
 import '../assets/styles/containers/Projects.css'
 
 export default class Projects extends Component{
     state={
-        projects:[
-            {
-                id:1,
-                title: "My personal website",
-                image:'https://i.ibb.co/RBsMxXr/portfolio.png',
-                preview:'https://matisantillan.dev/',
-                code:'https://github.com/Matisantillan11/Portfolio',
-                description: 'This project is my personal website. The porpose was hace a place to expose my work and where people might know me better.',
-                react:true
-            },
-            {
-                id:2,
-                title: "Find Rock",
-                image: 'https://i.ibb.co/1rjYd42/find-rock.png',
-                preview:'https://find-rock-drab.vercel.app/',
-                code:'https://github.com/Matisantillan11/find-rock',
-                description: 'Project from course of React in Escuela DevRock. In this project I connect to Last.fm API to create an artist/musician searcher.',
-                react: true
-            },
-            {
-                id:3,
-                title: "Simon Dice",
-                image: 'https://i.ibb.co/BBrd8Jz/simon-dice.png' ,
-                preview:'https://simon-dice-omega.vercel.app/',
-                code:'https://github.com/Matisantillan11/SimonDice',
-                description: 'In this project de porpouse is to recreate SimonDice game whit a secuense to reply and using an score to know who is winning. ',
-                react: false
-            }
-        ],
+        projects:[],
         technologies:[
                 {
                     id:1,
@@ -64,16 +37,45 @@ export default class Projects extends Component{
                 }
         ]
     }
+
+    componentDidMount() {
+        this.setState({
+          projects: [],
+          loading: true,
+          error: false,
+        });
+    
+        const db = firebase.database();
+        const dbref = db.ref("Projects");
+    
+        dbref.on("child_added", (snapshot) => {
+          this.setState({
+            projects: this.state.projects.concat(snapshot.val()),
+            loading: false,
+            error: false,
+          });
+        });
+      }
+
     render(){
         return(
             <>
             <Navbar/>
             <h1 className="project-page-title">My Projects</h1>
             <div className="projects_container">
-                <ProjectCard 
-                projects = {this.state.projects}
-                technologies = {this.state.technologies}
-                />
+                {this.state.projects.map((project, i) =>(
+
+                    <ProjectCard
+                    key= {i}
+                    name={project.name}
+                    pic={project.pic}
+                    description={project.description}
+                    react ={project.react}
+                    code={project.code}
+                    review={project.review}
+                    technologies = {this.state.technologies}
+                    />
+                ))}
                 
                 
                 
