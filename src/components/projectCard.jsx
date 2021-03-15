@@ -1,5 +1,4 @@
-import React from 'react'
-import { Component } from 'react';
+import React ,{ Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import "firebase/firebase-storage";
 //Components
@@ -35,10 +34,10 @@ class ProjectCard extends Component{
             <>
             
             <div 
-            className="project_card">
+            className="project_card"
+            onClick={this.searchProject}>
                 <img className="project_card--img"src={this.props.pic} alt={this.props.name} />
                     <div className="project_card--container">
-
                         <div  className="links-container">
                             <a className = "link" rel="noopener noreferrer" target="_blank" href={this.props.code}>
                                 View Code

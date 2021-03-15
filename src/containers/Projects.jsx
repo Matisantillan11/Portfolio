@@ -3,12 +3,13 @@ import React, {Component} from 'react'
 import Navbar from '../components/Navbar'
 import ProjectCard from '../components/projectCard'
 import firebase from "firebase/app";
-import "firebase/database";
+import "firebase/firestore";
 import '../assets/styles/containers/Projects.css'
 
 export default class Projects extends Component{
     state={
         projects:[],
+        projectId:[],
         technologies:[
                 {
                     id:1,
@@ -40,20 +41,27 @@ export default class Projects extends Component{
 
     componentDidMount() {
         this.setState({
-          projects: [],
-          loading: true,
-          error: false,
+            projects: [],
+            loading: true,
+            error: false,
         });
     
-        const db = firebase.database();
-        const dbref = db.ref("Projects");
+        const db = firebase.firestore()
+        const productRef = db.collection("projects")
     
-        dbref.on("child_added", (snapshot) => {
-          this.setState({
-            projects: this.state.projects.concat(snapshot.val()),
-            loading: false,
-            error: false,
-          });
+        productRef.onSnapshot(snapshot => {
+            if(snapshot.empty){
+                return <h1>No hay productos</h1>
+            } else {
+                snapshot.forEach(project =>{
+                    this.setState({
+                        projects: this.state.projects.concat(project.data()).reverse(),
+                        projectId: this.state.projectId.concat(project.id),
+                        loading: false,
+                        error: false,
+                    });
+                })
+            }
         });
       }
 
@@ -67,6 +75,7 @@ export default class Projects extends Component{
 
                     <ProjectCard
                     key= {i}
+                    projectId = {this.state.projectId[i]}
                     name={project.name}
                     pic={project.pic}
                     description={project.description}

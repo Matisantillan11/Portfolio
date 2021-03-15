@@ -1,10 +1,8 @@
 export default {
-    apiKey: "AIzaSyBXxM4rjCqwahmqQjcsDNIYMwn9QZLyBzI",
-    authDomain: "matisantiillan-dev.firebaseapp.com",
-    databaseURL: "https://matisantiillan-dev.firebaseio.com",
-    projectId: "matisantiillan-dev",
-    storageBucket: "matisantiillan-dev.appspot.com",
-    messagingSenderId: "53246020950",
-    appId: "1:53246020950:web:4823aa3f0da4c2db2b1af7",
-    databaseURL:"https://matisantiillan-dev.firebaseio.com/"
+    apiKey: "AIzaSyADUCLnhDn95jGKBPDq0kwbBkMDmXyYgUI",
+    authDomain: "myportfolio-matisantillandev.firebaseapp.com",
+    projectId: "myportfolio-matisantillandev",
+    storageBucket: "myportfolio-matisantillandev.appspot.com",
+    messagingSenderId: "944616899048",
+    appId: "1:944616899048:web:e1b0feb59fd57617bbe45d",
     }
