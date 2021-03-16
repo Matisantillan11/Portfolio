@@ -55,7 +55,7 @@ export default class Projects extends Component{
             } else {
                 snapshot.forEach(project =>{
                     this.setState({
-                        projects: this.state.projects.concat(project.data()).reverse(),
+                        projects: this.state.projects.concat(project.data()),
                         projectId: this.state.projectId.concat(project.id),
                         loading: false,
                         error: false,
