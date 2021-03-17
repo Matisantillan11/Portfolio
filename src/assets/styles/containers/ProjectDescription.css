@@ -43,8 +43,10 @@
 }
 
 .images-container img{
+    width: 721px;
+    height: 400px;
     box-shadow: 4px 8px 8px 4px rgba(32,33,36, 0.3);
-    object-fit: contain;
+    object-fit: fill;
 }
 
 .description_container{
