@@ -9,7 +9,10 @@ import '../assets/styles/containers/ProjectDescription.css'
 class ProjectDescription extends Component{
     state={
         name:"",
-        project: {},
+        project: {
+            technologies:[],
+            images:[]
+        },
         loading: true,
         error: false
     }
@@ -29,7 +32,7 @@ class ProjectDescription extends Component{
                     if(project.exists){
                         this.setState({ 
                             loading:false,
-                            project: project.data()
+                            project: project.data(),
                         })
                     }
                 })
@@ -54,7 +57,7 @@ class ProjectDescription extends Component{
                 <div className="projectDescription_container">
                     <h1 className="title-description">{this.state.project.name} PROJECT</h1>
                     <div className="topbar">
-                        <p>🚀{this.state.project.subtitle}</p>
+                        <p>🚀 {this.state.project.subtitle}</p>
 
                         <a href={this.state.project.code} target="_blank">Code</a>
                         <a href={this.state.project.review} target="_blank">Review</a>
@@ -63,9 +66,24 @@ class ProjectDescription extends Component{
                         <img src={this.state.project.pic} alt={this.state.project.name}/>
                     </div>
                     <div className="description_container">
+                        <h2>About</h2>
                         <p>{this.state.project.description}</p>
+                        <p>{this.state.project.subdescription}</p>
+                        <p>{this.state.project.p1}</p>
+                        <p>{this.state.project.p2}</p>
                     </div>
-
+                    <div className="techs_container">
+                        <h2>Technologies</h2>
+                         {this.state.project.technologies.map((tech, i) =>{
+                                return(
+                                    <ul key={i}>
+                                        <li className="MyStack-list-item">
+                                            <img key={i} className="MyStack-list-item--img" src={this.state.project.images[i]} alt={tech}/>
+                                        {tech}</li>
+                                    </ul>
+                                )
+                            })}
+                    </div>
                 </div>
             </>
         )

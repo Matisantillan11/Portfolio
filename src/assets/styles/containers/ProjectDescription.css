@@ -12,11 +12,15 @@
     color: #2A3B4E;
     font-size: 45px;
 }
-.topbar{width: 70%; margin:5% 0 0 25%;}
+.topbar{
+    width: 80%;
+    margin-top: 5%;
+    margin-left:15%;
+}
 
 .topbar p{
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom:5%;
 }
 
@@ -44,14 +48,23 @@
 }
 
 .description_container{
-    width: 47.5%;
+    width: 65%;
     text-align: left;
-    margin-bottom: 10%;
-    padding: 0 5%;
+    margin-bottom: 5%;
 }
 
 .description_container p{
-    
-    font-size: 25px;
+    font-size: 22px;
+    margin-top: 3.5%;
+}
+.techs_container{
+    width: 80%;
+    margin-left:15%;
+    margin-bottom: 5%;
+    align-items: left;
+}
+
+.techs_container h2{
+    margin-bottom: 2.5%;
 }
 
