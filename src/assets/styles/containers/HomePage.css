@@ -27,14 +27,26 @@
 .title{
     margin-top: 12.5%;
     font-size: 28px;
+    
 }
 
 .subtitle{
+    position: relative; 
+    width: 90%;
+    border-right: 2px solid #010101;
     font-size: 22px;
     font-weight: 700;
+    margin: 2.5% 0;
+    overflow: hidden;
+    transform: translateY(-50%);
+    white-space: nowrap;
 }
 
-
+.animation-typewriter{
+    animation: typewrite 8s steps(40) 1s 1 normal both, 
+    textCursor 1s steps(40) infinite normal;
+    
+}
 .text_container{
     width: 40%;
     height: 100%;
@@ -80,6 +92,20 @@
 .arrow-icon:hover{
     cursor: pointer;
     transform: rotate(-45deg);
+}
+
+@keyframes typewrite {
+    from{width:  0;}
+    to {width: 90%;}
+}
+
+@keyframes textCursor {
+    from {
+        border-right-color: #010101;
+      }
+      to {
+        border-right-color: transparent;
+      }
 }
 
 @media screen and (max-width: 768px){

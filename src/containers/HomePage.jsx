@@ -19,9 +19,9 @@ export default () =>{
                 
                     <div className="text_container">
                         <h2 className="title">
-                            Freelance Web Designer & Developer <br /> based in Córdoba, Argentina.
+                            Freelance Web Designer & Developer  <br /> based in Córdoba, Argentina.
                         </h2>
-                        <h3 className="subtitle">
+                        <h3 className="subtitle animation-typewriter">
                             Highly expecienced developing custom WebApps. 
                         </h3>
                         <p>Hey, my name is Matias Santillan and this is my personal website. Here you can know me a little better, see the technologies I use in my projects and see the latest I've been working on.

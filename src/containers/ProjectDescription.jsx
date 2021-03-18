@@ -25,7 +25,6 @@ class ProjectDescription extends Component{
         let projectName = this.props.history.location.search.substr(1).replace("%20", "-");
 
         dbref.where("name", "==", `${projectName}`).get().then((doc) =>{
-           
             if(!doc.empty){
                 this.setState({loading: true})
                 doc.forEach(project =>{
@@ -74,15 +73,15 @@ class ProjectDescription extends Component{
                     </div>
                     <div className="techs_container">
                         <h2>Technologies</h2>
-                         {this.state.project.technologies.map((tech, i) =>{
-                                return(
-                                    <ul key={i}>
-                                        <li className="MyStack-list-item">
-                                            <img key={i} className="MyStack-list-item--img" src={this.state.project.images[i]} alt={tech}/>
-                                        {tech}</li>
-                                    </ul>
-                                )
-                            })}
+                        {this.state.project.technologies.map((tech, i) =>{
+                            return(
+                                <ul key={i}>
+                                    <li className="MyStack-list-item">
+                                        <img key={i} className="MyStack-list-item--img" src={this.state.project.images[i]} alt={tech}/>
+                                    {tech}</li>
+                                </ul>
+                            )
+                        })}
                     </div>
                 </div>
             </>

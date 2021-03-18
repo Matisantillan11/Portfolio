@@ -25,8 +25,8 @@ class ProjectCard extends Component{
                     <div className="project_card--container">
                         <div  className="links-container">
                             <a className = "link" rel="noopener noreferrer" target="_blank" href={this.props.code}>
-                                <span class="link-decoration">View Code</span>
-                                <span class="icon-change">
+                                <span className="link-decoration">View Code</span>
+                                <span className="icon-change">
                                     <img
                                     src="https://cdn.sanity.io/images/tljndwv6/production/182744b0662c24bb7d37846566bdb7ebee3470d6-15x15.svg"
                                     alt="External Link"
@@ -38,8 +38,8 @@ class ProjectCard extends Component{
                                 </span>
                             </a>
                             <a className = "link" rel="noopener noreferrer" target="_blank" href={this.props.preview}>
-                            <span class="link-decoration">Live Preview</span>
-                                <span class="icon-change">
+                            <span className="link-decoration">Live Preview</span>
+                                <span className="icon-change">
                                     <img
                                     src="https://cdn.sanity.io/images/tljndwv6/production/182744b0662c24bb7d37846566bdb7ebee3470d6-15x15.svg"
                                     alt="External Link"
@@ -51,9 +51,9 @@ class ProjectCard extends Component{
                                     />
                                 </span>
                             </a>
-                            <a className = "link" rel="noopener noreferrer" onClick={this.searchProject}>
+                            <p className = "link" onClick={this.searchProject}>
                                 <span className="link-decoration">More..</span>
-                            </a>
+                            </p>
                         </div>
                     </div>
                 
