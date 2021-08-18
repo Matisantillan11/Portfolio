@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { Component } from 'react';
-import Navbar from '../components/Navbar';
+import {Navbar} from '../components/Navbar';
 
 import Technologies from '../components/Technologies';
 import Me from '../assets/images/me.png';

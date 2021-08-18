@@ -1,4 +1,4 @@
-.MyDescription_container{
+/* .MyDescription_container{
     width: 80%;
     display: flex;
     align-items:center;
@@ -20,7 +20,8 @@
 }
 
 /* Who I Am */
-.WhoIam_container{
+
+/* .WhoIam_container{
     width: 80%;
     align-items:left;
     margin: 2% 10%;
@@ -55,9 +56,9 @@
     width: 50px;
     height: 50px;
     padding-top:3%;
-}
+} */
 /* My Stack */
-.MyStack_container{
+/* .MyStack_container{
     width: 80%;
     height: 50vh;
     align-items:left;
@@ -114,4 +115,4 @@
         width: 60%;
         margin: 2% 5%;
     }
-}
+} */

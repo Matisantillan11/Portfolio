@@ -4,7 +4,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 
 
-import Navbar from '../components/Navbar.jsx'
+import {Navbar} from '../components/Navbar.jsx'
 import '../assets/styles/containers/ProjectDescription.css'
 class ProjectDescription extends Component{
     state={

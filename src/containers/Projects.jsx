@@ -1,6 +1,6 @@
 import React, {Component} from 'react' 
 
-import Navbar from '../components/Navbar'
+import {Navbar} from '../components/Navbar'
 import ProjectCard from '../components/projectCard'
 import firebase from "firebase/app";
 import "firebase/firestore";
