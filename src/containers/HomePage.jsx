@@ -3,33 +3,25 @@ import {Navbar} from '../components/Navbar'
 
 import Me from '../assets/images/me.png';
 import '../assets/styles/containers/HomePage.css'
+import { Link } from 'react-router-dom';
 
 
 export default () =>{
     return(
         <div className="home_page">
-            <Navbar/> 
 
             <div id="hero">
                 <div className="hero__text-container">
                     <h3 className="slogan">Hey, soy Matias Santillan</h3>
-                    <p>Fullstack developer y apasionado por la tecnología</p>
+                    <p>Full-stack web developer, enfocado y dedicado al Stack de JavaScript  utilizando frameworks como React JS, React Native & Node JS.</p>
+
+                    <p>Sientete libre de ver mi trabajo en mi portfolio web</p>
+
+                    <p>Puedes contactarte conmigo por Linkedin o Email. Tambien puedes encontrarme en GitHub</p>
                 </div>
 
-                <a className="hero_toaction"href="">Más sobre mi</a>
+                <Link className="hero_toaction" to="/Projects">Ver mis proyectos</Link>
             </div>
-            <div id="about">
-            
-                <h2 className="WhoIam_container-title">
-                    Quien soy? 
-                </h2>
-                <p className="WhoIam_container-body">
-               Soy Desarrollador de Software que le encanta crear con tecnologías webs</p>
-    
-
-                    
-            </div>
-           
         </div>
     )
 }

@@ -9,10 +9,9 @@ export const Navbar = () => {
 
     return(
         <>
-            <nav className="navbar">
-                <Hamburguer />
-                <Logo />   
-            </nav>
+            <header className="navbar">
+                <Hamburguer /> 
+            </header>
         </>
     )
     

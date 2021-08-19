@@ -5,8 +5,8 @@
   top: 0;
   left: 0;
   display: flex;
-  background-color: #333;
-  box-shadow: 0px 4px 10px #f1f1f12f;
+  /* background-color: #333;
+  box-shadow: 0px 4px 10px #f1f1f12f; */
 }
 .navbar_link {
   width: 10%;
