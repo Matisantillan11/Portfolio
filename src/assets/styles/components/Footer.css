@@ -1,13 +1,11 @@
 .footer_container {
-  position: absolute;
   bottom: 0;
   width: 100vw;
-  height: 2vh;
-  margin: 5% auto;
+  min-height: 2vh;
+  margin: 2.5% 0;
 }
 
 .footer_container .footer_text {
   font-size: 15px;
-  margin: 2.5% 0;
   text-align: center;
 }
