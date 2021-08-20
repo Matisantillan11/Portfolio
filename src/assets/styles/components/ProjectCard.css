@@ -1,291 +1,73 @@
-.project_card{
-    width: 500px;
-    height: 350px;
-    box-shadow: 4px 8px 8px 4px rgba(32,33,36, 0.3);
-    border-radius: 4px;
-    margin:2% ;
-    overflow: hidden;
-    display: flex;
-    transition: 450ms all;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
-    position: relative;
+.project_card {
+  position: relative;
+  display: flex;
+  min-width: 350px;
+  width: 80%;
+  max-width: 480px;
+  height: 280px;
+  border-radius: 8px;
+  margin: 2% 10%;
+  overflow: hidden;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
 }
 
-.project_card:hover{
-    transform: scale(1.1);
-    opacity: 1;
-    z-index: 1;
+.project_card:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
-.project_card--img{
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    
+.project_card--img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
-
 
 .project_card--container {
-    background: linear-gradient(to top, #040404c7, #000000e1);
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 0px;
-    -webkit-transition: all .5s linear;
-    -moz-transition: all .5s linear;
-    -o-transition: all .5s linear;
-    transition: all .5s linear;
+  background: linear-gradient(to top, #040404c7, #000000e1);
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  border: 1px solid #040404c7;
 }
 
-.project_card_textContainer{
-    height: 100%;
-    width: 40%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+.project_card_textContainer {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project_card:hover .project_card--container {
-    height:100%;
-    opacity:1;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.project_card--title{
-    padding-top: 1%;
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-.project_card--description{
-    text-align: center;
-    font-size:22px;
-    margin: 2% 10%;
-}
-
-.links-container {
-    display:flex; 
-    flex-direction: column; 
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.link-decoration {
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    color: white;
+@media screen and (min-width: 600px) {
+  .project_card {
+    width: 70%;
   }
-
-  .link{
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .link-decoration::before,
-  .link-decoration::after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .link-decoration::before {
-    background: #333;
-  }
-  
-  .link-decoration::after {
-    background: white;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 300ms ease-out;
-  }
-  
-  /* We add the Icon Change */
-  .icon-change {
-    display: grid;
-    width: 20px;
-    margin-left: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    overflow-x: hidden;
-  }
-  
-  .icon-change img {
-    width: 20px;
-    transform: translateX(-40px);
-    transition: transform 300ms ease-out;
-  }
-  .arrow{
-      fill:white;
-      stroke:white;
-  }
-  /* In the end, we add the styles when doing hover */
-  .link:hover .link-decoration::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  
-  .link:hover img {
-    transform: translateX(0);
-  }
-
-
-.link{
-    margin: 2.5%;
 }
 
-
-button{
-    outline: none;
-    border-radius: 8px;
-    padding:2.5%;
-    margin: .5% 2.5% 0 .8%;
-    border: 1px solid white; 
-    background: transparent;
-    cursor: pointer; 
+@media screen and (min-width: 600px) {
+  .project_card {
+    width: 40%;
+    height: 310px;
+    margin: 2%;
+  }
 }
-
-/* .project_card:nth-child(2n){
-    margin-top: 8%;
-    margin-left: 10%;
-}
- */
-button:hover{
-    color: black;
-    background: white;
-}
-
-button:first-child{
-    margin-left: 5%;
-}
-
-@media screen and (max-width: 768px){
-
-    .project_card{
-        flex-direction: column;
-        min-height: 450px;
-        width: 80%;
-        margin: 5% 0;
-    }
-
-    .project_card--img{
-        width: 100%;
-        min-height: 60%;
-        border-right: none;
-        
-    }
-    .project_card_textContainer{
-        width: 100%;
-        height: 40%;
-        flex-direction: row;
-    }
-    .project_card_titleContainer{
-        width: 60%;
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .techs_Container{
-        width: 40%;
-        display:flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: center;
-    }
-
-    .project_card--title{
-        font-size:22px ;
-    }
-    .project_card--description{
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 600px){
-    .project_card{
-        width: 90%;
-        min-height: 450px;
-        
-    }
-    .project_card--img{
-        width: 100%;
-        height: 60%;
-    }
-        
-    .project_card_textContainer{
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        height: 40%;
-    }
-    .project_card_titleContainer{
-        width: 50%;
-    }
-
-    .project_card--description{
-        margin: -2.5% 2% 1% 2%;
-    }
-    .techs_Container{
-        width: 50%;
-    }
-    .project_card--title{
-        font-size:20px ;
-    }
-    .project_card--description{
-        font-size: 18px;
-    }
-}
-@media screen and (max-width: 400px){
-    .project_card{
-        width: 95%;
-        min-height: 450px;
-        
-    }
-    .project_card--img{
-        width: 100%;
-        height: 40%;
-    }
-        
-    .project_card_textContainer{
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        height: 60%;
-    }
-    .project_card_titleContainer{
-        width: 50%;
-    }
-
-    .project_card--description{
-        margin: -2.5% 2% 1% 2%;
-    }
-    .techs_Container{
-        width: 50%;
-    }
-    .project_card--title{
-        font-size:18px ;
-    }
-    .project_card--description{
-        font-size: 16px;
-    }
-}
-
