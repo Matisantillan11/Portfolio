@@ -1,9 +1,9 @@
 import React from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
-import HomePage from '../containers/HomePage'
+import {HomePage} from '../containers/HomePage'
 import MyDescription from '../containers/MyDescription'
-import Projects from '../containers/Projects'
+import {Projects} from '../containers/Projects'
 import Layout from '../components/Layout.jsx'
 import ProjectDescription from '../containers/ProjectDescription'
 

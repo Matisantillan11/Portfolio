@@ -6,7 +6,7 @@ import '../assets/styles/containers/HomePage.css'
 import { Link } from 'react-router-dom';
 
 
-export default () =>{
+export const HomePage = () =>{
     return(
         <div className="home_page">
 
