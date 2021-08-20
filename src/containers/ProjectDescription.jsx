@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Component } from "react";
 import firebase from "firebase/app";
+import { useHistory } from "react-router-dom";
+
 import "firebase/firestore";
 
-import { Navbar } from "../components/Navbar.jsx";
 import "../assets/styles/containers/ProjectDescription.css";
-import { useHistory } from "react-router-dom";
 
 export const ProjectDescription = () => {
   const [projectDescription, setProjectDescription] = useState({});
@@ -38,74 +37,44 @@ export const ProjectDescription = () => {
 
   return (
     <>
-      <div className="projectDescription_container">
-        <h1 className="title-description">{projectDescription.name} PROJECT</h1>
-        <div className="topbar">
-          <p>🚀 {projectDescription.subtitle}</p>
+      {projectDescription && (
+        <div className="projectDescription_container">
+          <h1 className="title-description">
+            PROYECTO {projectDescription.name}
+          </h1>
+          <div className="topbar">
+            <p>{projectDescription.subtitle}</p>
 
-          <a href={projectDescription.code} target="_blank">
-            Code
-          </a>
-          <a href={projectDescription.review} target="_blank">
-            Review
-          </a>
-        </div>
-        <div className="images-container">
-          <img src={projectDescription.pic} alt={projectDescription.name} />
-        </div>
-        <div className="description_container">
-          <h2>About</h2>
-          <p>{projectDescription.description}</p>
-          <p>{projectDescription.subdescription}</p>
-          <p>{projectDescription.p1}</p>
-          <p>{projectDescription.p2}</p>
-        </div>
-        {/* <div className="techs_container">
-        <h2>Technologies</h2>
-        {projectDescription.technologies.map((tech, i) => {
-          return (
-            <ul key={i}>
-              <li className="MyStack-list-item">
-                <img
-                  key={i}
-                  className="MyStack-list-item--img"
-                  src={projectDescription.images[i]}
-                  alt={tech}
-                />
-                {tech}
-              </li>
+            <a href={projectDescription.code} target="_blank">
+              Código
+            </a>
+            <a href={projectDescription.review} target="_blank">
+              Visitar
+            </a>
+          </div>
+          <div className="images-container">
+            <img src={projectDescription.pic} alt={projectDescription.name} />
+          </div>
+          <div className="description_container">
+            <h2>Sobre el proyecto</h2>
+            <p>{projectDescription.description}</p>
+            <p>{projectDescription.subdescription}</p>
+            <p>{projectDescription.p1}</p>
+            <p>{projectDescription.p2}</p>
+          </div>
+          <div className="techs_container">
+            <h2>Tecnologías utilizadas</h2>
+            <ul>
+              {projectDescription.technologies &&
+                projectDescription.technologies.map((tech, i) => (
+                  <li key={i} className="MyStack-list-item">
+                    {tech}
+                  </li>
+                ))}
             </ul>
-          );
-        })} 
-        </div>*/}
-      </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
-
-/* class ProjectDescription extends Component {
-  state = {
-    name: "",
-    project: {
-      technologies: [],
-      images: [],
-    },
-    loading: true,
-    error: false,
-  };
-
-  searchingProject = () => {
-    
-  };
-  componentDidMount() {
-    this.searchingProject();
-  }
-
-  render() {
-    return (
-      
-    );
-  }
-}
-
-export default ProjectDescription; */
