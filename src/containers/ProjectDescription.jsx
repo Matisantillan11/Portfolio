@@ -1,11 +1,89 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Component } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
 import { Navbar } from "../components/Navbar.jsx";
 import "../assets/styles/containers/ProjectDescription.css";
-class ProjectDescription extends Component {
+import { useHistory } from "react-router-dom";
+
+export const ProjectDescription = () => {
+  const [projectDescription, setProjectDescription] = useState({});
+  const history = useHistory();
+  useEffect(() => {
+    const db = firebase.firestore();
+    const dbref = db.collection("projects");
+
+    let projectName = history.location.search.substr(1).replace("%20", "-");
+
+    dbref
+      .where("name", "==", `${projectName}`)
+      .get()
+      .then((doc) => {
+        if (!doc.empty) {
+          let projectDescription = {};
+          doc.forEach((project) => {
+            if (project.exists) {
+              projectDescription = project.data();
+            }
+          });
+
+          setProjectDescription(projectDescription);
+        } else {
+          console.log("not added");
+        }
+      })
+      .catch((error) => console.log(error.message));
+  }, []);
+
+  return (
+    <>
+      <div className="projectDescription_container">
+        <h1 className="title-description">{projectDescription.name} PROJECT</h1>
+        <div className="topbar">
+          <p>🚀 {projectDescription.subtitle}</p>
+
+          <a href={projectDescription.code} target="_blank">
+            Code
+          </a>
+          <a href={projectDescription.review} target="_blank">
+            Review
+          </a>
+        </div>
+        <div className="images-container">
+          <img src={projectDescription.pic} alt={projectDescription.name} />
+        </div>
+        <div className="description_container">
+          <h2>About</h2>
+          <p>{projectDescription.description}</p>
+          <p>{projectDescription.subdescription}</p>
+          <p>{projectDescription.p1}</p>
+          <p>{projectDescription.p2}</p>
+        </div>
+        {/* <div className="techs_container">
+        <h2>Technologies</h2>
+        {projectDescription.technologies.map((tech, i) => {
+          return (
+            <ul key={i}>
+              <li className="MyStack-list-item">
+                <img
+                  key={i}
+                  className="MyStack-list-item--img"
+                  src={projectDescription.images[i]}
+                  alt={tech}
+                />
+                {tech}
+              </li>
+            </ul>
+          );
+        })} 
+        </div>*/}
+      </div>
+    </>
+  );
+};
+
+/* class ProjectDescription extends Component {
   state = {
     name: "",
     project: {
@@ -17,32 +95,7 @@ class ProjectDescription extends Component {
   };
 
   searchingProject = () => {
-    const db = firebase.firestore();
-    const dbref = db.collection("projects");
-
-    let projectName = this.props.history.location.search
-      .substr(1)
-      .replace("%20", "-");
-
-    dbref
-      .where("name", "==", `${projectName}`)
-      .get()
-      .then((doc) => {
-        if (!doc.empty) {
-          this.setState({ loading: true });
-          doc.forEach((project) => {
-            if (project.exists) {
-              this.setState({
-                loading: false,
-                project: project.data(),
-              });
-            }
-          });
-        } else {
-          console.log("not added");
-        }
-      })
-      .catch((error) => console.log(error.message));
+    
   };
   componentDidMount() {
     this.searchingProject();
@@ -50,49 +103,9 @@ class ProjectDescription extends Component {
 
   render() {
     return (
-      <>
-        <Navbar />
-        {this.state.loading && <p>Loading...</p>}
-        <div className="projectDescription_container">
-          <h1 className="title-description">
-            {this.state.project.name} PROJECT
-          </h1>
-          <div className="topbar">
-            <p>🚀 {this.state.project.subtitle}</p>
-
-            <a href={this.state.project.code} target="_blank">
-              Code
-            </a>
-            <a href={this.state.project.review} target="_blank">
-              Review
-            </a>
-          </div>
-          <div className="images-container">
-            <img src={this.state.project.pic} alt={this.state.project.name} />
-          </div>
-          <div className="description_container">
-            <h2>About</h2>
-            <p>{this.state.project.description}</p>
-            <p>{this.state.project.subdescription}</p>
-            <p>{this.state.project.p1}</p>
-            <p>{this.state.project.p2}</p>
-          </div>
-          {/*  <div className="techs_container">
-                        <h2>Technologies</h2>
-                        {this.state.project.technologies.map((tech, i) =>{
-                            return(
-                                <ul key={i}>
-                                    <li className="MyStack-list-item">
-                                        <img key={i} className="MyStack-list-item--img" src={this.state.project.images[i]} alt={tech}/>
-                                    {tech}</li>
-                                </ul>
-                            )
-                        })}
-                    </div> */}
-        </div>
-      </>
+      
     );
   }
 }
 
-export default ProjectDescription;
+export default ProjectDescription; */
