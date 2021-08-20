@@ -2,7 +2,7 @@
 .burger:focus {
   position: absolute;
   flex-direction: column;
-  z-index: 100;
+  z-index: 99999999;
   cursor: pointer;
   display: flex;
   top: 15px;

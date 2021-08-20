@@ -1,21 +1,20 @@
-import React from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import HomePage from '../containers/HomePage'
-import MyDescription from '../containers/MyDescription'
-import Projects from '../containers/Projects'
-import Layout from '../components/Layout.jsx'
-import ProjectDescription from '../containers/ProjectDescription'
+import { HomePage } from "../containers/HomePage";
 
-export default () =>(
-    <BrowserRouter>
-        <Layout>
-            <Switch>
-                <Route exact path ="/" component={HomePage}/>
-                <Route exact path ="/About" component={MyDescription}/>
-                <Route exact path ="/Projects" component={Projects}/>
-                <Route exact path ="/Description" component={ProjectDescription}/>
-            </Switch>
-        </Layout>
-    </BrowserRouter>
-)
+import { Projects } from "../containers/Projects";
+import Layout from "../components/Layout.jsx";
+import { ProjectDescription } from "../containers/ProjectDescription";
+
+export default () => (
+  <BrowserRouter>
+    <Layout>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/Projects" component={Projects} />
+        <Route exact path="/Description" component={ProjectDescription} />
+      </Switch>
+    </Layout>
+  </BrowserRouter>
+);
