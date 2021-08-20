@@ -12,34 +12,22 @@ import { IoLogoGithub } from 'react-icons/io5'
 export const NavbarItems = ({ status, onClick }) => {
 	return (
 		<ul className='navbar__items-menu' id='menu' status={status}>
-			<ListItem textItem='Inicio' linkItem='/' onClick={onClick}>
-				<IoHomeSharp />
-			</ListItem>
+			<div className='items-container'>
+				<ListItem textItem='Inicio' linkItem='/' onClick={onClick}>
+					<IoHomeSharp />
+				</ListItem>
 
-			<ListItem textItem='Portfolio' linkItem='/Projects' onClick={onClick}>
-				<IoCodeSharp />
-			</ListItem>
+				<ListItem textItem='Portfolio' linkItem='/Projects' onClick={onClick}>
+					<IoCodeSharp />
+				</ListItem>
 
-			<ExternalListItem
-				textItem='Contactame'
-				externalLink='mailto:matias1.santillan@gmail.com'
-			>
-				<IoMailSharp />
-			</ExternalListItem>
-
-			<ExternalListItem
-				textItem='Linkedin'
-				externalLink='https://www.linkedin.com/in/matisantillan11/'
-			>
-				<IoLogoLinkedin />
-			</ExternalListItem>
-
-			<ExternalListItem
-				textItem='GitHub'
-				externalLink='https://github.com/Matisantillan11'
-			>
-				<IoLogoGithub />
-			</ExternalListItem>
+				<ExternalListItem
+					textItem='Contactame'
+					externalLink='mailto:matias1.santillan@gmail.com'
+				>
+					<IoMailSharp />
+				</ExternalListItem>
+			</div>
 		</ul>
 	)
 }
