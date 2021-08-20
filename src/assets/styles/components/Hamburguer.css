@@ -1,5 +1,4 @@
-.burger,
-.burger:focus {
+.burger {
 	position: absolute;
 	flex-direction: column;
 	z-index: 99999999;

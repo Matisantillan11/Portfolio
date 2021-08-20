@@ -41,6 +41,7 @@
 .navbar__items--link svg {
 	width: 20px;
 	height: 20px;
+	cursor: pointer;
 }
 .navbar__items-menu .navbar__items--link:nth-child(1) {
 	transition: all 0.5 ease-in 0.4s;

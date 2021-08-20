@@ -66,6 +66,7 @@
 }
 
 .hero_toaction {
+	position: relative;
 	color: #f1f1f1;
 	font-weight: 500;
 	border: 2px solid #546ccf;
@@ -73,6 +74,29 @@
 	text-decoration: none;
 	border-radius: 8px;
 	background-color: #546ccf;
+	transition: 0.3s ease-in;
+	z-index: 1;
+}
+
+.hero_toaction:hover {
+	color: #f1f1f1;
+	border-color: #1e1e62;
+}
+.hero_toaction:before {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 100%;
+	background: #1e1e62;
+	color: #f1f1f1;
+	transition: 0.3s ease-in;
+}
+
+.hero_toaction:hover:before {
+	right: 0;
 }
 
 @media screen and (min-width: 600px) {

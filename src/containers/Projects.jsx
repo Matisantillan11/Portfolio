@@ -27,7 +27,7 @@ export const Projects = () => {
 	}, [])
 	return (
 		<>
-			<h1 className='project-page-title'>My Projects</h1>
+			<h1 className='project-page-title'>Mis proyectos</h1>
 			<div className='projects_container'>
 				{projects &&
 					projects.map((project, i) => (

@@ -1,134 +1,157 @@
 .projectDescription_container {
-  width: 80%;
-  margin: 5% 10%;
-  padding-top: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+	width: 80%;
+	margin: 5% 10%;
+	padding-top: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
 }
 .title-description {
-  text-transform: uppercase;
-  text-align: center;
-  color: #f1f1f1;
+	text-transform: uppercase;
+	text-align: center;
+	color: #f1f1f1;
 }
 .topbar {
-  width: 80%;
-  margin: 5% 0;
+	width: 80%;
+	margin: 5% 0;
 }
 
 .topbar p {
-  text-align: left;
-  font-size: 25px;
-  margin-bottom: 10%;
+	text-align: left;
+	font-size: 25px;
+	margin-bottom: 10%;
 }
 
 .topbar a {
-  border: 1px solid #546ccf;
-  border-radius: 8px;
-  background-color: #546ccf;
-  color: #f1f1f1;
-  margin-right: 16px;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-size: 18px;
+	position: relative;
+	font-weight: 500;
+	border: 2px solid #546ccf;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 8px;
+	background: transparent;
+	color: #546ccf;
+	transition: 0.3s ease-in;
+	z-index: 1;
+	margin-right: 20px;
+}
+
+.topbar a:hover {
+	color: #f1f1f1;
+	border-color: #546ccf;
+}
+.topbar a:before {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 100%;
+	background: #546ccf;
+	transition: 0.3s ease-in;
+}
+
+.topbar a:hover:before {
+	right: 0;
 }
 
 .images-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 5% 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 5% 0;
 }
 
 .images-container img {
-  width: 100%;
-  height: 100%;
-  box-shadow: 4px 8px 8px 4px rgba(32, 33, 36, 0.3);
-  object-fit: fill;
-  border-radius: 12px;
-  max-width: 780px;
+	width: 100%;
+	height: 100%;
+	box-shadow: 4px 8px 8px 4px rgba(32, 33, 36, 0.3);
+	object-fit: fill;
+	border-radius: 12px;
+	max-width: 780px;
 }
 
 .description_container {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 5%;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 5%;
 }
 
 .description_container p {
-  font-size: 22px;
-  margin-top: 3.5%;
+	font-size: 22px;
+	margin-top: 3.5%;
 }
 .techs_container {
-  width: 100%;
-  margin-bottom: 10%;
-  align-items: left;
+	width: 100%;
+	margin-bottom: 10%;
+	align-items: left;
 }
 
 .techs_container h2 {
-  margin-bottom: 2.5%;
+	margin-bottom: 2.5%;
 }
 
 .techs_container .MyStack-list-item {
-  list-style: none;
-  font-size: 20px;
+	list-style: none;
+	font-size: 20px;
 }
 
 @media screen and (min-width: 600px) {
-  .topbar p {
-    margin-bottom: 5%;
-  }
+	.topbar p {
+		margin-bottom: 5%;
+	}
 }
 
 @media screen and (min-width: 800px) {
-  .projectDescription_container {
-    width: 80%;
-    margin: 5% 10%;
-    padding-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
+	.projectDescription_container {
+		width: 80%;
+		margin: 5% 10%;
+		padding-top: 5%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
 
-  .topbar {
-    margin: 2.5% 0;
-  }
+	.topbar {
+		margin: 2.5% 0;
+	}
 
-  .techs_container {
-    width: 100%;
-    margin-bottom: 5%;
-    align-items: left;
-  }
+	.techs_container {
+		width: 100%;
+		margin-bottom: 5%;
+		align-items: left;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-  .projectDescription_container {
-    width: 55%;
-    margin: 2.5% 22.5%;
-  }
-  .topbar {
-    margin: 1.5% 0;
-  }
+	.projectDescription_container {
+		width: 55%;
+		margin: 2.5% 22.5%;
+	}
+	.topbar {
+		margin: 1.5% 0;
+	}
 
-  .topbar p {
-    margin-bottom: 2.5%;
-  }
+	.topbar p {
+		margin-bottom: 2.5%;
+	}
 
-  .images-container {
-    margin: 2.5% 0;
-  }
+	.images-container {
+		margin: 2.5% 0;
+	}
 
-  .description_container {
-    margin: 2.5% 0;
-  }
+	.description_container {
+		margin: 2.5% 0;
+	}
 
-  .description_container p {
-    margin-top: 1%;
-  }
+	.description_container p {
+		margin-top: 1%;
+	}
 
-  .techs_container h2 {
-    margin-bottom: 1.5%;
-  }
+	.techs_container h2 {
+		margin-bottom: 1.5%;
+	}
 }
