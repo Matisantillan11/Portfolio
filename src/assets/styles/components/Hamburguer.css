@@ -1,54 +1,53 @@
-.burger,
-.burger:focus {
-  position: absolute;
-  flex-direction: column;
-  z-index: 99999999;
-  cursor: pointer;
-  display: flex;
-  top: 15px;
-  right: 25px;
-  padding: 10px;
-  border-radius: 50%;
-  outline: 0;
-  cursor: pointer;
-  background-color: #232323;
+.burger {
+	position: absolute;
+	flex-direction: column;
+	z-index: 99999999;
+	cursor: pointer;
+	display: flex;
+	top: 15px;
+	right: 25px;
+	padding: 10px;
+	border-radius: 50%;
+	outline: 0;
+	cursor: pointer;
+	background-color: #232323;
 }
 
 .burger i {
-  background: #7a7a7a;
-  width: 24px;
-  height: 2px;
-  margin: 4px;
-  border-radius: 2px;
-  transition: all 0.5s linear;
-  outline: 0;
+	background: #7a7a7a;
+	width: 24px;
+	height: 2px;
+	margin: 4px;
+	border-radius: 2px;
+	transition: all 0.5s linear;
+	outline: 0;
 }
 
 .burger i:first-child {
-  width: 16px;
+	width: 16px;
 }
 
 .burger i:last-child {
-  width: 8px;
+	width: 8px;
 }
 
 .open:nth-child(1) {
-  transform: rotate(45deg) translate3d(5px, 3px, 0);
+	transform: rotate(45deg) translate3d(5px, 3px, 0);
 }
 .open:nth-child(2) {
-  transform: rotate(-45deg) translate3d(2px, -1px, 0);
+	transform: rotate(-45deg) translate3d(2px, -1px, 0);
 }
 .open:nth-child(3) {
-  transform: rotate(45deg) translate3d(5px, -14px, 0);
+	transform: rotate(45deg) translate3d(5px, -14px, 0);
 }
 
 .close:nth-child(1) {
-  transform: rotate(0) translateY(0);
+	transform: rotate(0) translateY(0);
 }
 
 .close:nth-child(2) {
-  opacity: 1;
+	opacity: 1;
 }
 .close:nth-child(3) {
-  transform: rotate(0) translateY(0);
+	transform: rotate(0) translateY(0);
 }
