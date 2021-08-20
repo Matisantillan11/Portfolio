@@ -1,0 +1,12 @@
+.contact_media--container {
+	width: 50px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact_media--container svg {
+	width: 30px;
+	height: 30px;
+}

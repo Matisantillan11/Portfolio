@@ -4,6 +4,7 @@ import { Navbar } from '../components/Navbar'
 import Me from '../assets/images/me.png'
 import '../assets/styles/containers/HomePage.css'
 import { Link } from 'react-router-dom'
+import { MediaContainer } from '../components/MediaContainer'
 
 export const HomePage = () => {
 	return (
@@ -57,6 +58,7 @@ export const HomePage = () => {
 					Ver mis proyectos
 				</Link>
 			</div>
+			<MediaContainer />
 		</div>
 	)
 }
