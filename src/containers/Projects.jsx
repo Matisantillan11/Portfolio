@@ -6,34 +6,6 @@ import "firebase/firestore";
 import "../assets/styles/containers/Projects.css";
 
 export const Projects = () => {
-  const technologies = [
-    {
-      id: 1,
-      name: "HTML5",
-      image: "https://cdn.worldvectorlogo.com/logos/html5.svg",
-    },
-    {
-      id: 2,
-      name: "CSS3",
-      image: "https://cdn.worldvectorlogo.com/logos/css3.svg",
-    },
-    {
-      id: 3,
-      name: "JavaScript",
-      image: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
-    },
-    {
-      id: 4,
-      name: "React Js",
-      image: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-    },
-    {
-      id: 5,
-      name: "Firebase",
-      image: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-    },
-  ];
-
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -52,8 +24,6 @@ export const Projects = () => {
         setProjects(projects);
       }
     });
-
-    return projects;
   }, []);
   return (
     <>
@@ -63,14 +33,12 @@ export const Projects = () => {
           projects.map((project, i) => (
             <ProjectCard
               key={i}
-              /*  projectId = {project.projectId} */
               name={project.data.name}
               pic={project.data.pic}
               description={project.data.description}
               react={project.data.react}
               code={project.data.code}
               review={project.data.review}
-              technologies={technologies}
             />
           ))}
       </div>
