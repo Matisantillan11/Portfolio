@@ -1,18 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Hamburguer } from "./Hamburguer";
 
-import { Hamburguer } from './Hamburguer';
-import { Logo } from './Logo';
-
-import '../assets/styles/components/Navbar.css'
+import "../assets/styles/components/Navbar.css";
 
 export const Navbar = () => {
-
-    return(
-        <>
-            <header className="navbar">
-                <Hamburguer /> 
-            </header>
-        </>
-    )
-    
-}
+  return (
+    <>
+      <header className="navbar">
+        <Hamburguer />
+      </header>
+    </>
+  );
+};

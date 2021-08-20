@@ -1,51 +1,62 @@
 .navbar__items-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #2a3b4e;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  clip-path: circle(100px at 90% -20%);
-  -webkit-clip-path: circle(100px at 90% -20%);
-  transition: all 1s ease-out;
-  pointer-events: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #1e1e62;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	clip-path: circle(100px at 90% -20%);
+	-webkit-clip-path: circle(100px at 90% -20%);
+	transition: all 1s ease-out;
+	pointer-events: none;
 }
 
 .navbar__items--link {
-  list-style: none;
+	list-style: none;
 }
 
 .navbar_redirections {
-  text-decoration: none;
-  font-size: 25px;
-  color: #f1f1f1;
+	text-decoration: none;
+	font-size: 25px;
+	color: #f1f1f1;
+	margin-right: 10px;
 }
 
 .navbar__items-menu.expand {
-  clip-path: circle(1600px at 90% -20%);
-  -webkit-clip-path: circle(1600px at 90% -20%);
-  pointer-events: all;
+	clip-path: circle(1600px at 90% -20%);
+	-webkit-clip-path: circle(1600px at 90% -20%);
+	pointer-events: all;
 }
 
+.navbar__items--link svg {
+	width: 20px;
+	height: 20px;
+}
 .navbar__items-menu .navbar__items--link:nth-child(1) {
-  transition: all 0.5 ease-in 0.4s;
+	transition: all 0.5 ease-in 0.4s;
 }
 .navbar__items-menu .navbar__items--link:nth-child(2) {
-  transition: all 0.5 ease-in 0.6s;
+	transition: all 0.5 ease-in 0.6s;
 }
 .navbar__items-menu .navbar__items--link:nth-child(3) {
-  transition: all 0.5 ease-in 0.8s;
+	transition: all 0.5 ease-in 0.8s;
 }
 .navbar__items-menu .navbar__items--link:nth-child(4) {
-  transition: all 0.5 ease-in 1s;
+	transition: all 0.5 ease-in 1s;
 }
 .navbar__items-menu .navbar__items--link:nth-child(5) {
-  transition: all 0.5 ease-in 1.2s;
+	transition: all 0.5 ease-in 1.2s;
 }
 .navbar__items--link.fade {
-  opacity: 1;
+	opacity: 1;
+}
+
+@media screen and (min-width: 900px) {
+	.navbar__items-menu {
+		width: 40%;
+	}
 }
