@@ -1,12 +1,14 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
+import { BackgroundParticles } from '../assets/styles/components/BackgroundParticles'
 
 import '../assets/styles/containers/HomePage.css'
 
 export const HomePage = () => {
 	return (
 		<div className='home_page'>
+			<BackgroundParticles />
 			<div id='hero'>
 				<div className='hero__text-container'>
 					<h3 className='slogan'>

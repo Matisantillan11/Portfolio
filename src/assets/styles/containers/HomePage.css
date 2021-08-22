@@ -7,11 +7,16 @@
 #hero {
 	width: 100%;
 	height: 100%;
-	padding: 8% 5% 0% 5%;
+	/* padding: 8% 5% 0% 5%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 0;
+	transform: translate(-50%, -50%);
 }
 
 .hero__text-container {
@@ -46,6 +51,7 @@
 	font-size: 20px;
 	margin: 0 5px;
 	text-decoration: none;
+	z-index: 2;
 }
 
 .hero__text-container p .react-native {
@@ -53,6 +59,7 @@
 	font-size: 20px;
 	margin: 0 5px;
 	text-decoration: none;
+	z-index: 2;
 }
 
 .hero__text-container p .node {
@@ -60,10 +67,7 @@
 	font-size: 20px;
 	margin: 0 5px;
 	text-decoration: none;
-}
-
-.hero__text-container .node {
-	font-size: 20px;
+	z-index: 2;
 }
 
 .hero__text-container .red-social {
@@ -85,7 +89,7 @@
 	border-radius: 8px;
 	background-color: #546ccf;
 	transition: 0.3s ease-in;
-	z-index: -1;
+	z-index: 999;
 }
 
 .hero_toaction:hover {
@@ -113,7 +117,6 @@
 	#hero {
 		width: 70%;
 		max-width: 630px;
-		margin: 0 15%;
 	}
 }
 
@@ -121,7 +124,6 @@
 	#hero {
 		width: 70%;
 		max-width: 630px;
-		margin: 0 20%;
 	}
 }
 
@@ -129,7 +131,6 @@
 	#hero {
 		width: 70%;
 		max-width: 630px;
-		margin: 0 20%;
 	}
 }
 
@@ -137,6 +138,5 @@
 	#hero {
 		width: 70%;
 		max-width: 630px;
-		margin: 0 25%;
 	}
 }
