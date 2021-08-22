@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 import { BackgroundParticles } from '../assets/styles/components/BackgroundParticles'
+import { MediaContainer } from '../components/MediaContainer'
 
 import '../assets/styles/containers/HomePage.css'
 
@@ -82,6 +83,7 @@ export const HomePage = () => {
 					Ver mis proyectos
 				</Link>
 			</div>
+			<MediaContainer />
 		</div>
 	)
 }

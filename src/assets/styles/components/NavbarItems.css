@@ -1,5 +1,5 @@
 .navbar__items-menu {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	background: #1e1e62;
@@ -9,7 +9,7 @@
 	-webkit-clip-path: circle(100px at 90% -20%);
 	transition: all 1s ease-out;
 	pointer-events: none;
-	z-index: 22;
+	z-index: 111;
 }
 
 .items-container {
