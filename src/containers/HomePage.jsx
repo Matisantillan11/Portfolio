@@ -1,12 +1,15 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
+import { BackgroundParticles } from '../assets/styles/components/BackgroundParticles'
+import { MediaContainer } from '../components/MediaContainer'
 
 import '../assets/styles/containers/HomePage.css'
 
 export const HomePage = () => {
 	return (
 		<div className='home_page'>
+			<BackgroundParticles />
 			<div id='hero'>
 				<div className='hero__text-container'>
 					<h3 className='slogan'>
@@ -47,15 +50,40 @@ export const HomePage = () => {
 					<p>Sientete libre de ver mi trabajo en mi portfolio web</p>
 
 					<p>
-						Puedes contactarte conmigo por Linkedin o Email. Tambien puedes
-						encontrarme en GitHub
+						Puedes contactarte conmigo por
+						<a
+							href='https://nodejs.org/es/'
+							rel='noopener noreferrer'
+							target='_blank'
+							className='red-social'
+						>
+							Linkedin
+						</a>
+						o
+						<a
+							href='https://nodejs.org/es/'
+							rel='noopener noreferrer'
+							target='_blank'
+							className='red-social'
+						>
+							Email.
+						</a>
+						Tambien puedes encontrarme en
+						<a
+							href='https://nodejs.org/es/'
+							rel='noopener noreferrer'
+							target='_blank'
+							className='red-social'
+						>
+							GitHub
+						</a>
 					</p>
 				</div>
-
 				<Link className='hero_toaction' to='/Projects'>
 					Ver mis proyectos
 				</Link>
 			</div>
+			<MediaContainer />
 		</div>
 	)
 }

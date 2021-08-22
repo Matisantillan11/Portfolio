@@ -1,7 +1,7 @@
 .burger {
-	position: absolute;
+	position: fixed;
 	flex-direction: column;
-	z-index: 99999999;
+	z-index: 9999;
 	cursor: pointer;
 	display: flex;
 	top: 15px;
@@ -21,6 +21,7 @@
 	border-radius: 2px;
 	transition: all 0.5s linear;
 	outline: 0;
+	z-index: 9999;
 }
 
 .burger i:first-child {
