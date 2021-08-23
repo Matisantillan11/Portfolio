@@ -1,8 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
+import { LinkExternal } from '../components/LinkExternal'
 import { BackgroundParticles } from '../assets/styles/components/BackgroundParticles'
 import { MediaContainer } from '../components/MediaContainer'
+import { IoLogoReact } from 'react-icons/io5'
+import { IoLogoNodejs } from 'react-icons/io5'
 
 import '../assets/styles/containers/HomePage.css'
 
@@ -24,7 +27,7 @@ export const HomePage = () => {
 							target='_blank'
 							className='react'
 						>
-							React JS
+							React JS <IoLogoReact />
 						</a>
 						,
 						<a
@@ -33,16 +36,17 @@ export const HomePage = () => {
 							target='_blank'
 							className='react-native'
 						>
-							React Native
+							React Native <IoLogoReact />
 						</a>
 						&
+						<br />
 						<a
 							href='https://nodejs.org/es/'
 							rel='noopener noreferrer'
 							target='_blank'
 							className='node'
 						>
-							Node js
+							Node js <IoLogoNodejs />
 						</a>
 						.
 					</p>
@@ -52,7 +56,7 @@ export const HomePage = () => {
 					<p>
 						Puedes contactarte conmigo por
 						<a
-							href='https://nodejs.org/es/'
+							href='https://www.linkedin.com/in/matisantillan11/'
 							rel='noopener noreferrer'
 							target='_blank'
 							className='red-social'
@@ -61,7 +65,7 @@ export const HomePage = () => {
 						</a>
 						o
 						<a
-							href='https://nodejs.org/es/'
+							href='mailto:matias1.santillan@gmail.com'
 							rel='noopener noreferrer'
 							target='_blank'
 							className='red-social'
@@ -70,7 +74,7 @@ export const HomePage = () => {
 						</a>
 						Tambien puedes encontrarme en
 						<a
-							href='https://nodejs.org/es/'
+							href='https://github.com/Matisantillan11'
 							rel='noopener noreferrer'
 							target='_blank'
 							className='red-social'
