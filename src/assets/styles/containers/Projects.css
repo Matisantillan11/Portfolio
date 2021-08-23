@@ -16,12 +16,6 @@
 	padding-top: 5%;
 }
 
-@media screen and (min-width: 800px) {
-	.projects_container {
-		flex-wrap: nowrap;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.project-page-title {
 		margin: 2.5% 0 0.5% 0;
