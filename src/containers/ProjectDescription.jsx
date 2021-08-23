@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import firebase from 'firebase/app'
 import { useHistory } from 'react-router-dom'
-
 import 'firebase/firestore'
 
 import '../assets/styles/containers/ProjectDescription.css'

@@ -1,8 +1,7 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
-import { LinkExternal } from '../components/LinkExternal'
-import { BackgroundParticles } from '../assets/styles/components/BackgroundParticles'
+import { BackgroundParticles } from '../components/BackgroundParticles'
 import { MediaContainer } from '../components/MediaContainer'
 import { IoLogoReact } from 'react-icons/io5'
 import { IoLogoNodejs } from 'react-icons/io5'
@@ -51,7 +50,7 @@ export const HomePage = () => {
 						.
 					</p>
 
-					<p>Sientete libre de ver mi trabajo en mi portfolio web</p>
+					<p>Siéntete libre de ver mi trabajo en mi portfolio web</p>
 
 					<p>
 						Puedes contactarte conmigo por
@@ -72,7 +71,7 @@ export const HomePage = () => {
 						>
 							Email.
 						</a>
-						Tambien puedes encontrarme en
+						También puedes encontrarme en
 						<a
 							href='https://github.com/Matisantillan11'
 							rel='noopener noreferrer'
