@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Particles from 'react-particles-js'
+import Particles from "react-tsparticles";
 import { ConfigParticles } from '../ConfigParticles'
 
 export const BackgroundParticles = ({ children }) => {
 	return (
 		<>
-			<Particles id='particles' params={ConfigParticles}>
+			<Particles id='tsparticles' options={ConfigParticles}>
 				{children}
 			</Particles>
 		</>
