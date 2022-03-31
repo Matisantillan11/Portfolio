@@ -11,7 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,7 +36,10 @@
   },
   "devDependencies": {
     "react-icons": "^4.2.0",
-    "sweetalert2": "^10.10.3",
-    "react-particles-js": "^3.5.3"
+    "react-particles-js": "^3.5.3",
+    "sweetalert2": "^10.10.3"
+  },
+  "optionalDependencies": {
+    "babel-loader": "8.1.0"
   }
 }
