@@ -30,10 +30,7 @@ export const MediaContainer = () => {
 					<IoLogoLinkedin />
 				</ContactMedia>
 
-				<ContactMedia
-					color='#CD3C30'
-					externalLink='mailto:matias1.santillan@gmail.com'
-				>
+				<ContactMedia internal color='#CD3C30' externalLink='/Work'>
 					<IoMailSharp />
 				</ContactMedia>
 			</div>
