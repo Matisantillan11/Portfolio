@@ -8,7 +8,6 @@ import 'firebase/firestore'
 import '../assets/styles/containers/Projects.css'
 
 import '../assets/styles/containers/WorkWithMe.css'
-import '../assets/styles/containers/HomePage.css'
 import Swal from 'sweetalert2'
 
 export const WorkWithMe = () => {
