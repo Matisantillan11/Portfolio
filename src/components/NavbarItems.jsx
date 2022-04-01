@@ -21,11 +21,7 @@ export const NavbarItems = ({ status, onClick }) => {
 					<IoCodeSharp />
 				</ListItem>
 
-				<DownloadItem
-					textItem='Descargar CV'
-					linkItem={'../assets/images/SantillanMatiasCV.pdf'}
-					onClick={onClick}
-				>
+				<DownloadItem textItem='Descargar CV' linkItem={CV} onClick={onClick}>
 					<IoDownloadSharp />
 				</DownloadItem>
 

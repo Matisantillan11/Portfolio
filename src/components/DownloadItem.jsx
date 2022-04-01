@@ -5,7 +5,7 @@ export const DownloadItem = ({ onClick, linkItem, textItem, children }) => {
 		<a
 			className='navbar_redirections'
 			href={linkItem}
-			download
+			download='SantillanMatiasCV'
 			onClick={onClick}
 		>
 			{textItem}
