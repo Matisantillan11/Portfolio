@@ -21,12 +21,9 @@ export const NavbarItems = ({ status, onClick }) => {
 					<IoCodeSharp />
 				</ListItem>
 
-				<ExternalListItem
-					textItem='Contactame'
-					externalLink='mailto:matias1.santillan@gmail.com'
-				>
+				<ListItem textItem='Contactame' linkItem='/Work' onClick={onClick}>
 					<IoMailSharp />
-				</ExternalListItem>
+				</ListItem>
 			</div>
 		</ul>
 	)
