@@ -1,13 +1,13 @@
 import React from 'react'
 
 import '../assets/styles/components/NavbarItems.css'
-import { ExternalListItem } from './ExternalListItem'
+import { DownloadItem } from './DownloadItem'
 import { ListItem } from './ListItem'
 import { IoHomeSharp } from 'react-icons/io5'
 import { IoCodeSharp } from 'react-icons/io5'
 import { IoMailSharp } from 'react-icons/io5'
-import { IoLogoLinkedin } from 'react-icons/io5'
-import { IoLogoGithub } from 'react-icons/io5'
+import { IoDownloadSharp } from 'react-icons/io5'
+import CV from '../assets/images/SantillanMatiasCV.pdf'
 
 export const NavbarItems = ({ status, onClick }) => {
 	return (
@@ -17,9 +17,17 @@ export const NavbarItems = ({ status, onClick }) => {
 					<IoHomeSharp />
 				</ListItem>
 
-				<ListItem textItem='Portfolio' linkItem='/Projects' onClick={onClick}>
+				<ListItem textItem='Portfolio' linkItem={'/Projects'} onClick={onClick}>
 					<IoCodeSharp />
 				</ListItem>
+
+				<DownloadItem
+					textItem='Descargar CV'
+					linkItem={'../assets/images/SantillanMatiasCV.pdf'}
+					onClick={onClick}
+				>
+					<IoDownloadSharp />
+				</DownloadItem>
 
 				<ListItem textItem='Contactame' linkItem='/Work' onClick={onClick}>
 					<IoMailSharp />

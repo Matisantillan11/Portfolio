@@ -7,7 +7,6 @@ export const Hamburguer = () => {
 	const [status, setStatus] = useState('close')
 
 	const expandMenu = (ev) => {
-		ev.preventDefault()
 		const menu = document.getElementById('menu')
 		const links = document.querySelectorAll(
 			'.navbar__items-menu .navbar__items--link',
