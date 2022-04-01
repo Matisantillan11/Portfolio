@@ -3,6 +3,7 @@
 	min-height: 80vh;
 	height: auto;
 }
+
 #particles canvas {
 	position: absolute;
 	top: 0;
