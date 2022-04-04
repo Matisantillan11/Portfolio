@@ -19,7 +19,12 @@ export const ProjectCard = ({ name, pic, code, review }) => {
 	return (
 		<>
 			<div className='project_card'>
-				<img className='project_card--img' src={pic} alt={name} />
+				<img
+					className='project_card--img'
+					src={pic}
+					alt={name}
+					loading='lazy'
+				/>
 				<div className='project_card--container'>
 					<div className='links-container'>
 						<LinkExternal link={code} textBtn='Ver Código'>
