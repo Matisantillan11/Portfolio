@@ -98,6 +98,12 @@
 	font-size: 20px;
 }
 
+.MyStack-list-item--image {
+	margin-right: 5px;
+	width: 25px;
+	height: 25px;
+}
+
 @media screen and (min-width: 600px) {
 	.topbar p {
 		margin-bottom: 5%;

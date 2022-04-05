@@ -93,7 +93,13 @@ export const ProjectDescription = () => {
 								{projectDescription.technologies &&
 									projectDescription.technologies.map((tech, i) => (
 										<li key={i} className='MyStack-list-item'>
-											{tech}
+											<img
+												className='MyStack-list-item--image'
+												src={tech.icon}
+												alt={tech.name}
+												loading='lazy'
+											/>
+											{tech.name}
 										</li>
 									))}
 							</ul>
